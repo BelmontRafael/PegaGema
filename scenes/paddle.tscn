@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfkk8dj5j15kv"]
+
+[ext_resource type="Texture2D" uid="uid://ot5pgdjdki2x" path="res://GemCatcherAssets/paddleBlu.png" id="1_g4ixe"]
+[ext_resource type="Script" path="res://scenes/paddle.gd" id="1_tj268"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nppxg"]
+radius = 13.0
+height = 106.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_tj268")
+speed = 215.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nppxg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g4ixe")
